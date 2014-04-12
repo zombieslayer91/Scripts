@@ -2,3 +2,5 @@ Scripts
 =======
 
 ModPE Scripts Made By ME
+
+DO NOT REDISTRIBUTE MY MODS IT TOOK TIME & EFFORT TO MAKE THESE!
