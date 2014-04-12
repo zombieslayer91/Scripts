@@ -1,0 +1,83 @@
+//GemCraft By Zombieslayer91
+
+// All ID's 
+// Mana Ore - 129 (emerald ore)
+// Block Of Mana - 133 (emerald Block)
+// Mana Crystal - 188 (emerald)
+// Bottle O' Mana - 189 (exp potion)
+// Glass Bottle - 190 (empty bottle)
+
+Block.defineBlock(129, "Mana Ore", "emerald_ore");
+Block.defineBlock(133, "Block Of Mana", "emerald_block");
+Block.setDestroyTime(129, 3);
+Block.setDestroyTime(133, 5);
+Block.setDestroyTime(152, 4);
+
+ModPE.setItem(188, "emerald", 0, "Mana Cyrstal");
+ModPE.setItem(189, "experience_bottle", 0, "Bottle O' Mana");
+ModPE.setItem(190, "potion_bottle_empty", 0, "Empty Bottle");
+ModPE.setItem(200, "blaze_rod", 0, "Compressed Mana")
+
+
+Item.addCraftRecipe(188, 9, 0, [133, 1, 0]);
+Item.addCraftRecipe(133, 1, 0, [138, 9, 0]);
+Item.addCraftRecipe(331, 9, 0, [152, 1, 0]);
+Item.addCraftRecipe(152, 1, 0, [190, 9, 0]);
+Item.addCraftRecipe(190, 1, 0, [20, 3, 0]);
+
+function useItem(x,y,z,itemId,blockId,side)
+{
+	if(itemId==190)
+	{
+		if(blockId==133)
+		{
+			addItemInventory(190, -1);
+			addItemInventory(189, 1);
+		}
+	}
+}	
+
+
+// Magica Ore Generation
+
+var maSpawn=(getTile(1, 1, 1));
+if(maSpawn==7||maSpawn==1) {
+	setTile(200+q1,4+q2,50+q3,129,0); 
+	setTile(150+q4,4+q1,100+q2,129,0);
+	setTile(100+q3,4+q4,150+q1,129,0);
+	setTile(50+q2,4+q3,200+q4,129,0);
+	setTile(50+q1,4+q2,50+q3,129,0);
+	setTile(100+q4,4+q1,100+q2,129,0);
+	setTile(150+q3,4+q4,150+q1,129,0);
+	setTile(200+q2,4+q3,200+q4,129,0);
+	
+	setTile(200-q1,4+q2,50-q3,129,0);
+	setTile(150-q4,4+q1,100-q2,129,0)
+	setTile(100-q3,4+)
+	setTile(50)
+	setTile(50)
+	setTile(100)
+	setTile(150)
+	setTile(200)
+	
+	setTile()
+	setTile()
+	setTile()
+	setTile()
+	setTile()
+	setTile()
+	setTile()
+	setTile()
+	
+	setTile()
+	setTile()
+	setTile()
+	setTile()
+	setTile()
+	setTile()
+	setTile()
+	setTile()
+	
+	setTile()
+	setTile()
+}
